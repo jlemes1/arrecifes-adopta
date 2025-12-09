@@ -25,7 +25,13 @@ export default function Navbar() {
           href='/'
           className={`flex items-center gap-2 text-3xl font-normal ml-32 ${londrina_solid.className}`}
         >
-          <Image src={Logo} alt='Logo' width={58} height={58}></Image>
+          <Image
+            src={Logo}
+            alt='Logo'
+            width={58}
+            height={58}
+            className='w-[58px]! h-[58px]!'
+          ></Image>
           Arrecifes Adopta
         </Link>
       </div>
