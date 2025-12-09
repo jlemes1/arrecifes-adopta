@@ -5,8 +5,3 @@
     dark --prefersdark,
     emerald;
 }
-
-html,
-body {
-  @apply bg-base-100;
-}
