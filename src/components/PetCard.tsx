@@ -4,7 +4,7 @@ import { PawPrint } from 'lucide-react';
 
 export default function PetCard({ age, alt, animal, name, src }: Pet) {
   return (
-    <div className='card bg-base-200  w-96 h-full shadow-sm rounded-none border border-accent'>
+    <div className='card bg-base-200  w-96 h-auto shadow-sm rounded-none border border-accent'>
       <figure className=' relative w-full h-56 overflow-hidden'>
         <Image src={src} alt={alt} fill className='object-center' />
       </figure>
