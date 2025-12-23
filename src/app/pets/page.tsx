@@ -1,8 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import PetCard from '@/components/PetCard';
-import { petsData } from '@/utils/petsData';
+import { usePets } from '@/context/PetsContext';
 
 export default function Pets() {
+  const { pets } = usePets();
+
   return (
     <div>
       <div className='bg-accent flex flex-col lg:flex-row items-center justify-between px-4 sm:px-12 lg:px-72 pt-8 pb-16 lg:pt-20 '>
@@ -17,7 +21,7 @@ export default function Pets() {
       </div>
 
       <div className='bg-base-200 grid grid-cols-1 lg:grid-cols-4 gap-8 px-24 py-12 justify-items-center place-content-center'>
-        {petsData.map((petData) => (
+        {pets.map((petData) => (
           <PetCard key={petData.id} {...petData} />
         ))}
       </div>

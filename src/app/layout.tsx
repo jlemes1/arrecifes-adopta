@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/components/header/Header';
+import { PetsProvider } from '@/context/PetsContext';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -14,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang='en' data-theme='emerald'>
       <body>
-        <Header />
-        <main>{children}</main>
+        <PetsProvider>
+          <Header />
+          <main>{children}</main>
+        </PetsProvider>
       </body>
     </html>
   );
