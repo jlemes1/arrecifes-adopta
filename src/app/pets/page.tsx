@@ -3,9 +3,17 @@
 import Link from 'next/link';
 import PetCard from '@/components/PetCard';
 import { usePets } from '@/context/PetsContext';
+import { useState } from 'react';
 
 export default function Pets() {
   const { pets } = usePets();
+  const [animalFilter, setAnimalFilter] = useState<'All' | 'Perro' | 'Gato'>(
+    'All',
+  );
+
+  const visiblePets = pets.filter(
+    (pet) => animalFilter === 'All' || pet.animal === animalFilter,
+  );
 
   return (
     <div>
@@ -18,10 +26,41 @@ export default function Pets() {
             Volver
           </Link>
         </div>
+        <form className='filter pt-4' onSubmit={(e) => e.preventDefault()}>
+          <input
+            className='btn btn-square btn-neutral'
+            type='reset'
+            value='x'
+            onClick={() => setAnimalFilter('All')}
+          />
+
+          <input
+            className='btn btn-neutral'
+            type='radio'
+            name='animal'
+            aria-label='Perros'
+            value='Perro'
+            checked={animalFilter === 'Perro'}
+            onChange={(e) =>
+              setAnimalFilter(e.target.value as 'Perro' | 'Gato')
+            }
+          />
+          <input
+            className='btn btn-neutral'
+            type='radio'
+            name='animal'
+            aria-label='Gatos'
+            value='Gato'
+            checked={animalFilter === 'Gato'}
+            onChange={(e) =>
+              setAnimalFilter(e.target.value as 'Perro' | 'Gato')
+            }
+          />
+        </form>
       </div>
 
       <div className='bg-base-200 grid grid-cols-1 lg:grid-cols-4 gap-8 px-24 py-12 justify-items-center place-content-center'>
-        {pets.map((petData) => (
+        {visiblePets.map((petData) => (
           <PetCard key={petData.id} {...petData} />
         ))}
       </div>
