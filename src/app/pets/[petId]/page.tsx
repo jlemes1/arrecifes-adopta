@@ -24,15 +24,17 @@ function PetId() {
             </Link>
           </div>
         </div>
-        <div className='hero pt-48'>
-          <p className='text-5xl'>La mascota no existe o ya fue adoptada.</p>
+        <div className='flex items-center justify-center h-[calc(100vh-450px)]'>
+          <p className='text-center text-2xl sm:text-3xl lg:text-5xl'>
+            La mascota no existe o ya fue adoptada.
+          </p>
         </div>
       </section>
     );
   }
   return (
     <section>
-      <div className='bg-accent flex flex-col lg:flex-row  px-4 sm:px-12 lg:px-72 pt-8 lg:pt-20 '>
+      <div className='bg-accent flex flex-col lg:flex-row px-4 sm:px-12 lg:px-72 pt-8 lg:pt-20 '>
         <div className='pb-8 lg:pb-12.5 text-center lg:text-left'>
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Adoptar a {pet.name}
@@ -42,7 +44,7 @@ function PetId() {
           </Link>
         </div>
       </div>
-      <div className='flex justify-center px-4 sm:px-12 py-8'>
+      <div className='flex items-center justify-center px-4 h-[calc(100vh-450px)]'>
         <AdoptPetForm />
       </div>
     </section>

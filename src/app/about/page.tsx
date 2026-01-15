@@ -4,8 +4,8 @@ import dogs from '@/assets/dogs.png';
 
 export default function About() {
   return (
-    <div>
-      <div className='bg-accent flex flex-col lg:flex-row items-center lg:items-end justify-between px-4 sm:px-12 lg:px-72 pt-8 lg:pt-0 '>
+    <>
+      <section className='bg-accent flex flex-col lg:flex-row items-center lg:items-end justify-between px-4 sm:px-12 lg:px-72 pt-8 lg:pt-0 '>
         <div className='pb-8 lg:pb-12 text-center lg:text-left'>
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Nosotros
@@ -21,28 +21,26 @@ export default function About() {
           alt='Dogs'
           className='w-64 sm:w-80 lg:w-[500px] h-auto'
         ></Image>
-      </div>
+      </section>
 
-      <div className='hero bg-base-200 min-h-screen items-start pt-8 sm:pt-12 lg:pt-16 px-6 sm:px-8'>
-        <div className='hero-content'>
-          <div className='max-w-4xl'>
-            <p className='text-base sm:text-lg lg:text-xl font-medium'>
-              Arrecifes Adopta es una plataforma creada para conectar a personas
-              que buscan dar en adopción a sus mascotas con quienes desean
-              ofrecerles un nuevo hogar. Nuestro objetivo es brindar un espacio
-              seguro, accesible y transparente para que cada animal encuentre
-              una familia responsable y amorosa.
-            </p>
-            <p className='text-base sm:text-lg lg:text-xl font-medium py-6'>
-              Esta web surgió con la idea de facilitar el proceso de adopción,
-              permitir que cualquier persona pueda publicar a su mascota y
-              ayudar a quienes buscan un compañero de vida. Trabajamos para que
-              la experiencia sea sencilla, responsable y guiada por el bienestar
-              animal.
-            </p>
-          </div>
+      <section className='flex items-center justify-center px-6 sm:px-8 h-[calc(100vh-450px)]'>
+        <div className='max-w-4xl'>
+          <p className='text-base sm:text-lg lg:text-xl font-medium'>
+            Arrecifes Adopta es una plataforma creada para conectar a personas
+            que buscan dar en adopción a sus mascotas con quienes desean
+            ofrecerles un nuevo hogar. Nuestro objetivo es brindar un espacio
+            seguro, accesible y transparente para que cada animal encuentre una
+            familia responsable y amorosa.
+          </p>
+          <p className='text-base sm:text-lg lg:text-xl font-medium py-6'>
+            Esta web surgió con la idea de facilitar el proceso de adopción,
+            permitir que cualquier persona pueda publicar a su mascota y ayudar
+            a quienes buscan un compañero de vida. Trabajamos para que la
+            experiencia sea sencilla, responsable y guiada por el bienestar
+            animal.
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
