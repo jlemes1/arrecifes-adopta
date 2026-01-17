@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arrecifes Adopta
 
-## Getting Started
+Proyecto en desarrollo.
 
-First, run the development server:
+## Qué es?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Arrecifes Adopta es una plataforma para adoptar o publicar mascotas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Qué ofrece?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Los usuarios pueden adoptar o publicar una mascota completando un formulario.
+- Una sección con las mascotas disponibles para adoptar.
+- Publicación detallada con foto de la mascota y descripcion.
+- Filtrar las mascotas por animal (Perro o Gato).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Qué falta?
 
-## Learn More
+- Integrar base de datos.
+- Panel de administración.
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- NextJS
+- TypeScript
+- TailwindCSS
+- DaisyUI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Diseño Responsive
 
-## Deploy on Vercel
+Adaptable a cualquier dispositivo.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Capturas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Home](./src/assets/Preview.PNG)
+
+![Services](./src/assets/Preview2.PNG)
+
+![Pets](./src/assets/Preview3.PNG)
