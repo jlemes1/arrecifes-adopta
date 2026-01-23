@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Header from '@/components/header/Header';
+import Header from '@/components/Header';
 import { PetsProvider } from '@/context/PetsContext';
 import Footer from '@/components/Footer';
 import './globals.css';

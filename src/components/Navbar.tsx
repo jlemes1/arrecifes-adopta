@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '@/assets/logo.svg';
 import { Londrina_Solid } from 'next/font/google';
-import type { NavProps } from '@/components/navbar//navbar-types';
+import type { NavProps } from '@/types/navbar';
 
 const londrina_solid = Londrina_Solid({
   weight: ['400', '900'],

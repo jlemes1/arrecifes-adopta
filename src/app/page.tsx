@@ -4,7 +4,7 @@ import dog from '@/assets/dog.jpg';
 
 export default function Home() {
   return (
-    <div className='hero bg-base-200 min-h-screen'>
+    <section className='hero bg-base-200 min-h-screen'>
       <div className='hero-content flex-col mb-24 lg:flex-row-reverse gap-8 lg:gap-12'>
         <Image
           src={dog}
@@ -28,6 +28,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

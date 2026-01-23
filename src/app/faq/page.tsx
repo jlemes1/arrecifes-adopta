@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function Faq() {
   return (
-    <section>
-      <div className='bg-accent flex flex-col lg:flex-row  px-4 sm:px-12 lg:px-72 pt-8 lg:pt-20 '>
+    <>
+      <section className='bg-accent flex flex-col lg:flex-row  px-4 sm:px-12 lg:px-72 pt-8 lg:pt-20 '>
         <div className='pb-8 lg:pb-12.5 text-center lg:text-left'>
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             FAQ
@@ -12,9 +12,9 @@ export default function Faq() {
             Volver
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className='flex flex-col justify-center items-center bg-base-200 w-full max-w-3xl lg:max-w-4xl mx-auto h-auto shadow-sm rounded-none border border-accent p-4 sm:p-5 lg:p-6 m-20'>
+      <section className='flex flex-col justify-center items-center bg-base-200 w-full max-w-3xl lg:max-w-4xl mx-auto h-auto shadow-sm rounded-none border border-accent p-4 sm:p-5 lg:p-6 m-20'>
         <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold'>
           Sobre Arrecifes Adopta
         </h2>
@@ -88,7 +88,7 @@ export default function Faq() {
             que te contacte el dueño de la mascota.
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

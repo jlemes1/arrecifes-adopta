@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { Pet } from '@/types/pet';
-import { petsData } from '@/utils/petsData';
+import { petsData } from '@/data/petsData';
 import { PublishPetFormData } from '@/schemas/publishPetSchema';
 
 type PetsContext = {

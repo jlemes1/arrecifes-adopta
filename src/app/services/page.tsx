@@ -5,8 +5,8 @@ import { Bone } from 'lucide-react';
 
 export default function Services() {
   return (
-    <section>
-      <div className='bg-accent flex flex-col lg:flex-row  px-4 sm:px-12 lg:px-72 pt-8 lg:pt-20 '>
+    <>
+      <section className='bg-accent flex flex-col lg:flex-row  px-4 sm:px-12 lg:px-72 pt-8 lg:pt-20 '>
         <div className='pb-8 lg:pb-12.5 text-center lg:text-left'>
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Servicios
@@ -15,9 +15,9 @@ export default function Services() {
             Volver
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 px-4 sm:px-8 md:px-12 lg:px-24 pb-16 pt-8 sm:pt-12 md:pt-16 lg:pt-20'>
+      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 px-4 sm:px-8 md:px-12 lg:px-24 pb-16 pt-8 sm:pt-12 md:pt-16 lg:pt-20'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-4xl lg:text-5xl font-bold'>Adoptar</h1>
           <div className='divider divider-accent'></div>
@@ -63,7 +63,7 @@ export default function Services() {
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
