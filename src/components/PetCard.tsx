@@ -7,7 +7,12 @@ export default function PetCard({ age, alt, animal, name, src, id }: Pet) {
   return (
     <div className='card bg-base-200  w-96 h-auto shadow-sm rounded-none border border-accent'>
       <figure className=' relative w-full h-56 overflow-hidden'>
-        <Image src={src} alt={alt} fill className='object-center' />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className='object-cover object-center'
+        />
       </figure>
       <div className='card-body gap-0 p-4'>
         <h2 className='card-title flex justify-center text-2xl font-bold '>

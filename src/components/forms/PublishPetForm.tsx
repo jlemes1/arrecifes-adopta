@@ -24,21 +24,16 @@ export function PublishPetForm() {
     resolver: zodResolver(publishPetSchema),
   });
 
-  const onSubmit: SubmitHandler<PublishPetFormData> = (data) => {
+  const onSubmit: SubmitHandler<PublishPetFormData> = async (data) => {
     try {
-      createPet(data);
+      await createPet(data);
 
       setSubmitMessage('Tu mascota ha sido publicada!');
-
       reset();
 
       setTimeout(() => {
-        setSubmitMessage('');
-      }, 2000);
-
-      setTimeout(() => {
         router.push('/pets');
-      }, 3000);
+      }, 1500);
     } catch (error) {
       setSubmitMessage('Error al publicar la mascota');
       console.error(error);
@@ -176,7 +171,7 @@ export function PublishPetForm() {
         type='text'
         id='phone'
         className='input w-full'
-        placeholder='Ingrese su telefono'
+        placeholder='Ingrese su teléfono'
         {...register('phone')}
       />
 
