@@ -10,7 +10,7 @@ export default function Contact() {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(event.currentTarget);
-    formData.append('access_key', '51d02486-bef9-40e2-842c-101369b0f4e5');
+    formData.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '');
 
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -25,6 +25,10 @@ export default function Contact() {
     } else {
       setResult('Error');
     }
+
+    setTimeout(() => {
+      setResult('');
+    }, 2000);
   };
 
   return (
