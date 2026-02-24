@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '@/assets/logo.svg';
@@ -68,7 +70,17 @@ export default function Navbar() {
           >
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link
+                  href={item.href}
+                  onClick={() => {
+                    const elem = document.activeElement;
+                    if (elem instanceof HTMLElement) {
+                      elem.blur();
+                    }
+                  }}
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
