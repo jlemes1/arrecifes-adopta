@@ -7,9 +7,13 @@ export const publishPetSchema = z.object({
     .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/, 'Solo letras y espacios'),
   age: z.string().min(1, { error: 'La edad es requerida' }),
   animal: z.enum(['Perro', 'Gato'], { error: 'Seleccione el tipo de animal' }),
-  photo: z
-    .instanceof(FileList)
-    .refine((files) => files.length > 0, 'Debes subir una foto'),
+  photo: z.custom<FileList>(
+    (val) =>
+      typeof window !== 'undefined' &&
+      val instanceof FileList &&
+      val.length > 0,
+    'Debes subir una foto',
+  ),
   username: z
     .string({ error: 'El nombre es requerido' })
     .min(3, { error: 'El nombre debe tener al menos 3 caracteres' })
