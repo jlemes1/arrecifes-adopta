@@ -45,7 +45,7 @@ function PetId() {
         </div>
       </div>
       <div className='flex items-center justify-center px-4 h-[calc(100vh-450px)]'>
-        <AdoptPetForm />
+        <AdoptPetForm petId={pet.id} />
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ export function LoginForm() {
         email: data.email,
         options: {
           shouldCreateUser: false,
-          emailRedirectTo: `${window.location.origin}/admin`,
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
         },
       });
 

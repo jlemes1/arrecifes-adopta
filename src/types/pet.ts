@@ -9,6 +9,8 @@ export type Pet = {
   src: string;
   alt: string;
   status: PetStatus;
+  adopted: boolean;
+  created_at: string;
   contact_name: string;
   contact_email: string;
   contact_phone: string;

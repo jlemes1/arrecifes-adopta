@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function PetCard({ age, alt, animal, name, src, id }: Pet) {
   return (
-    <div className='card bg-base-200  w-96 h-auto shadow-sm rounded-none border border-accent'>
+    <div className='card bg-base-100  w-96 h-auto shadow-sm rounded-none border border-accent'>
       <figure className=' relative w-full h-56 overflow-hidden'>
         <Image
           src={src}
@@ -25,8 +25,8 @@ export default function PetCard({ age, alt, animal, name, src, id }: Pet) {
           <span className='font-bold'>Edad:</span> {age}
         </p>
         <div className='card-actions justify-end '>
-          <Link className='btn btn-primary' href={`/pets/${id}`}>
-            Adoptar <PawPrint size={18} />
+          <Link className='btn btn-primary text-white' href={`/pets/${id}`}>
+            <PawPrint size={18} /> Adoptar
           </Link>
         </div>
       </div>

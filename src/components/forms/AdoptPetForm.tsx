@@ -3,9 +3,14 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AdoptPetFormData, adoptPetSchema } from '@/schemas/adoptPetSchema';
+import { supabase } from '@/utils/supabase/client';
 import { useState } from 'react';
 
-export function AdoptPetForm() {
+type AdoptPetFormProps = {
+  petId: number;
+};
+
+export function AdoptPetForm({ petId }: AdoptPetFormProps) {
   const [submitMessage, setSubmitMessage] = useState('');
 
   const {
@@ -17,9 +22,18 @@ export function AdoptPetForm() {
     resolver: zodResolver(adoptPetSchema),
   });
 
-  const onSubmit: SubmitHandler<AdoptPetFormData> = (data) => {
+  const onSubmit: SubmitHandler<AdoptPetFormData> = async (data) => {
     try {
-      console.log(data);
+      const { error } = await supabase.from('adoption_requests').insert({
+        pet_id: petId,
+        username: data.username,
+        email: data.email,
+        phone: data.phone,
+        status: 'pending',
+      });
+
+      if (error) throw error;
+
       setSubmitMessage('Tu solicitud de adopción ha sido enviada!');
 
       reset();
@@ -88,7 +102,7 @@ export function AdoptPetForm() {
         type='text'
         id='phone'
         className='input w-full'
-        placeholder='Ingrese su telefono'
+        placeholder='Ingrese su teléfono'
         {...register('phone')}
       />
 

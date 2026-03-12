@@ -27,6 +27,8 @@ export function PetsProvider({ children }: { children: ReactNode }) {
       const { data, error } = await supabase
         .from('pets')
         .select('*')
+        .eq('status', 'approved')
+        .eq('adopted', false)
         .order('created_at', { ascending: false });
 
       if (error) {
