@@ -1,21 +1,20 @@
 # Arrecifes Adopta
 
-Proyecto en desarrollo.
-
 ## Qué es?
 
-Arrecifes Adopta es una plataforma para adoptar o publicar mascotas.
+Arrecifes Adopta es una plataforma para adoptar y publicar mascotas.
 
-## Qué ofrece?
+## Qué tiene?
 
-- Los usuarios pueden adoptar o publicar una mascota completando un formulario.
+- Los usuarios pueden adoptar y publicar una mascota completando un formulario.
 - Una sección con las mascotas disponibles para adoptar.
 - Publicación detallada con foto de la mascota y descripción.
 - Filtrar las mascotas por animal (Perro o Gato).
+- Panel de administración para gestionar las solicitudes.
 
-## Qué falta?
+## Cómo funciona?
 
-- Panel de administración.
+Tanto para publicar como para adoptar, el usuario envía una solicitud completando un formulario que será aceptada o rechazada por un administrador desde el panel.
 
 ## Stack
 
@@ -36,3 +35,5 @@ Adaptable a cualquier dispositivo.
 ![Services](./src/assets/Preview2.PNG)
 
 ![Pets](./src/assets/Preview3.PNG)
+
+![Panel](./src/assets/Preview4.PNG)
