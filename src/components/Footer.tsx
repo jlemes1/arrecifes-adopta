@@ -34,7 +34,6 @@ function Footer() {
         >
           Juan Lemes
         </a>
-        . Imágenes de Freepik.
       </p>
     </footer>
   );
