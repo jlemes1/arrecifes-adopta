@@ -7,11 +7,9 @@ import {
   publishPetSchema,
 } from '@/schemas/publishPetSchema';
 import { usePets } from '@/context/PetsContext';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export function PublishPetForm() {
-  const router = useRouter();
   const { createPet } = usePets();
   const [submitMessage, setSubmitMessage] = useState('');
 
@@ -28,14 +26,14 @@ export function PublishPetForm() {
     try {
       await createPet(data);
 
-      setSubmitMessage('Tu mascota ha sido publicada!');
+      setSubmitMessage('Tu solicitud de publicación ha sido enviada!');
       reset();
 
       setTimeout(() => {
-        router.push('/pets');
-      }, 1500);
+        setSubmitMessage('');
+      }, 3000);
     } catch (error) {
-      setSubmitMessage('Error al publicar la mascota');
+      setSubmitMessage('Error al enviar la solicitud de publicación');
       console.error(error);
     }
   };
@@ -184,7 +182,7 @@ export function PublishPetForm() {
       </button>
 
       {submitMessage && (
-        <div className='toast toast-top toast-center'>
+        <div className='toast toast-center lg:toast-end'>
           <div className='alert alert-success rounded-field text-white'>
             <span>{submitMessage}</span>
           </div>
