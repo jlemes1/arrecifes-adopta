@@ -58,25 +58,19 @@ export function PetsProvider({ children }: { children: ReactNode }) {
       .getPublicUrl(fileName);
 
     // Publica la mascota en la base de datos
-    const { data, error: insertError } = await supabase
-      .from('pets')
-      .insert({
-        name: petData.name,
-        age: petData.age,
-        animal: petData.animal,
-        src: urlData.publicUrl,
-        alt: petData.name,
-        status: 'pending',
-        contact_name: petData.username,
-        contact_email: petData.email,
-        contact_phone: petData.phone,
-      })
-      .select()
-      .single();
+    const { error: insertError } = await supabase.from('pets').insert({
+      name: petData.name,
+      age: petData.age,
+      animal: petData.animal,
+      src: urlData.publicUrl,
+      alt: petData.name,
+      status: 'pending',
+      contact_name: petData.username,
+      contact_email: petData.email,
+      contact_phone: petData.phone,
+    });
 
     if (insertError) throw new Error('Error al publicar la mascota');
-
-    setPets((prevPets) => [data, ...prevPets]);
   };
 
   return (
