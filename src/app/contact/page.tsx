@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState, FormEvent } from 'react';
+import { CircleArrowLeft } from 'lucide-react';
 
 export default function Contact() {
   const [result, setResult] = useState('');
@@ -38,7 +39,8 @@ export default function Contact() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Contacto
           </h1>
-          <Link href='/' className='font-medium'>
+          <Link href='/' className='font-medium flex items-center gap-2'>
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>

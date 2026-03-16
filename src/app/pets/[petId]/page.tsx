@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import { usePets } from '@/context/PetsContext';
 import Link from 'next/link';
 import { AdoptPetForm } from '@/components/forms/AdoptPetForm';
+import { CircleArrowLeft } from 'lucide-react';
 
 function PetId() {
   const params = useParams();
@@ -19,7 +20,8 @@ function PetId() {
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
               Mascota no encontrada
             </h1>
-            <Link href='/pets' className='font-medium'>
+            <Link href='/pets' className='font-medium flex items-center gap-2'>
+              <CircleArrowLeft />
               Volver
             </Link>
           </div>
@@ -39,7 +41,8 @@ function PetId() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Adoptar a {pet.name}
           </h1>
-          <Link href='/pets' className='font-medium'>
+          <Link href='/pets' className='font-medium flex items-center gap-2'>
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PublishPetForm } from '@/components/forms/PublishPetForm';
+import { CircleArrowLeft } from 'lucide-react';
 
 export default function NewPet() {
   return (
@@ -9,7 +10,11 @@ export default function NewPet() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Publicar mascota
           </h1>
-          <Link href='/services' className='font-medium'>
+          <Link
+            href='/services'
+            className='font-medium flex items-center gap-2'
+          >
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>

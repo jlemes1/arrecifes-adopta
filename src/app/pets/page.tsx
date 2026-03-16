@@ -4,6 +4,7 @@ import Link from 'next/link';
 import PetCard from '@/components/PetCard';
 import { usePets } from '@/context/PetsContext';
 import { useState } from 'react';
+import { CircleArrowLeft } from 'lucide-react';
 
 export default function Pets() {
   const { pets } = usePets();
@@ -22,7 +23,8 @@ export default function Pets() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Mascotas
           </h1>
-          <Link href='/' className='font-medium flex gap-1'>
+          <Link href='/' className='font-medium flex items-center gap-2'>
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>

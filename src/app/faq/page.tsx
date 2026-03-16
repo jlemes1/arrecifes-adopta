@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CircleArrowLeft } from 'lucide-react';
 
 export default function Faq() {
   return (
@@ -8,7 +9,8 @@ export default function Faq() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             FAQ
           </h1>
-          <Link href='/' className='font-medium'>
+          <Link href='/' className='font-medium flex items-center gap-2'>
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>

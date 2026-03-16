@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import dogcat from '@/assets/dogcat.png';
 import { Bone } from 'lucide-react';
+import { CircleArrowLeft } from 'lucide-react';
 
 export default function Services() {
   return (
@@ -11,7 +12,8 @@ export default function Services() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Servicios
           </h1>
-          <Link href='/' className='font-medium'>
+          <Link href='/' className='font-medium flex items-center gap-2'>
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>

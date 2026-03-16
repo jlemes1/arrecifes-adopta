@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import dogs from '@/assets/dogs.png';
+import { CircleArrowLeft } from 'lucide-react';
 
 export default function About() {
   return (
@@ -10,7 +11,8 @@ export default function About() {
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-4'>
             Nosotros
           </h1>
-          <Link href='/' className='font-medium'>
+          <Link href='/' className='font-medium flex items-center gap-2'>
+            <CircleArrowLeft />
             Volver
           </Link>
         </div>
