@@ -13,6 +13,7 @@ import { supabase } from '@/utils/supabase/client';
 
 type PetsContext = {
   pets: Pet[];
+  loading: boolean;
   createPet: (petData: PublishPetFormData) => Promise<void>;
 };
 
@@ -20,6 +21,7 @@ const PetsContext = createContext<PetsContext | undefined>(undefined);
 
 export function PetsProvider({ children }: { children: ReactNode }) {
   const [pets, setPets] = useState<Pet[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Carga las mascotas desde la base de datos
@@ -36,6 +38,7 @@ export function PetsProvider({ children }: { children: ReactNode }) {
       } else {
         setPets(data);
       }
+      setLoading(false);
     };
 
     fetchPets();
@@ -74,7 +77,7 @@ export function PetsProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <PetsContext.Provider value={{ pets, createPet }}>
+    <PetsContext.Provider value={{ pets, loading, createPet }}>
       {children}
     </PetsContext.Provider>
   );

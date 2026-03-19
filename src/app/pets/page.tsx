@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { CircleArrowLeft } from 'lucide-react';
 
 export default function Pets() {
-  const { pets } = usePets();
+  const { pets, loading } = usePets();
   const [animalFilter, setAnimalFilter] = useState<'All' | 'Perro' | 'Gato'>(
     'All',
   );
@@ -62,9 +62,15 @@ export default function Pets() {
       </section>
 
       <section className='bg-base-200 grid grid-cols-1 lg:grid-cols-4 gap-8 px-24 py-12 justify-items-center place-content-center'>
-        {visiblePets.map((petData) => (
-          <PetCard key={petData.id} {...petData} />
-        ))}
+        {loading ? (
+          <div className='col-span-full flex justify-center items-center h-64'>
+            <span className='loading loading-spinner loading-lg text-accent'></span>
+          </div>
+        ) : (
+          visiblePets.map((petData) => (
+            <PetCard key={petData.id} {...petData} />
+          ))
+        )}
       </section>
     </>
   );
