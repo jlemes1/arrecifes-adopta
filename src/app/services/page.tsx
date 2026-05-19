@@ -42,7 +42,12 @@ export default function Services() {
         </div>
 
         <div>
-          <Image src={dogcat} className='max-w-sm lg:max-w-md' alt='DogCat' />
+          <Image
+            src={dogcat}
+            className='max-w-sm lg:max-w-md'
+            alt='DogCat'
+            priority
+          />
         </div>
 
         <div className='flex flex-col justify-center items-center'>

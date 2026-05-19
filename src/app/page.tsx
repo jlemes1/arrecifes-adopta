@@ -10,6 +10,7 @@ export default function Home() {
           src={dog}
           className='max-w-sm lg:max-w-lg aspect-square rounded-full shadow-2xl object-cover object-bottom-left'
           alt='Dog'
+          priority
         />
         <div className='flex flex-col gap-4'>
           <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold'>

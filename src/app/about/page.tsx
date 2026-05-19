@@ -21,6 +21,7 @@ export default function About() {
           height={400}
           src={dogs}
           alt='Dogs'
+          priority
           className='w-64 sm:w-80 lg:w-[500px] h-auto'
         ></Image>
       </section>
