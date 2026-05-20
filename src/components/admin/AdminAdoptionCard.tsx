@@ -27,6 +27,7 @@ export default function AdminAdoptionCard({
           src={pet.src}
           alt={pet.alt}
           fill
+          sizes='(max-width: 768px) 100vw, 400px'
           className='object-cover object-center'
         />
       </figure>
