@@ -11,6 +11,7 @@ export default function PetCard({ age, alt, animal, name, src, id }: Pet) {
           src={src}
           alt={alt}
           fill
+          sizes='(max-width: 768px) 100vw, 400px'
           className='object-cover object-center'
         />
       </figure>
